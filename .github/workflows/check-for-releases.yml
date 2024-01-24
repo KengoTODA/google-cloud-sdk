@@ -18,5 +18,5 @@ jobs:
     - name: Push Releases 
       run: ./.github/workflows/push_results_github.sh
       env:
-        GITHUB_REPO: ${{ github.action_repository }}
+        GITHUB_REPO: KengoTODA/google-cloud-sdk
         GITHUB_USER_AND_PASS: ${{ github.actor }}:${{ github.token }}
