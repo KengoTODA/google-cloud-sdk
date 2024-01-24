@@ -5,7 +5,7 @@ echo "Switch to checkout path"
 cd  /tmp/gcloud_history/
 
 echo "Setup push token"
-git remote set-url origin https://${GITHUB_PUSH_TOKEN}@github.com/twistedpair/google-cloud-sdk.git
+git remote set-url origin https://${GITHUB_USER_AND_PASS}@github.com/${GITHUB_REPO}.git
 
 echo "Push tags and commits..."
 git pull origin master --verbose
