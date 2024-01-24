@@ -6,6 +6,7 @@ cd  /tmp/gcloud_history/
 
 echo "Setup push token"
 git remote set-url origin https://${GITHUB_USER_AND_PASS}@github.com/${GITHUB_REPO}.git
+git config pull.rebase false
 
 echo "Push tags and commits..."
 git pull origin master --verbose
