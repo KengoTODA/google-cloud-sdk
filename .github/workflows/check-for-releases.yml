@@ -4,9 +4,6 @@ on:
   schedule:
     - cron:  '0 * * * *'
   workflow_dispatch: {}
-permissions:
-  contents: write
-  workflows: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,4 +17,4 @@ jobs:
       run: ./.github/workflows/push_results_github.sh
       env:
         GITHUB_REPO: KengoTODA/google-cloud-sdk
-        GITHUB_USER_AND_PASS: ${{ github.actor }}:${{ github.token }}
+        GITHUB_USER_AND_PASS: ${{ github.actor }}:${{ secrets.PAT }}
